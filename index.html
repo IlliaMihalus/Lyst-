@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Лист Святому Миколаю</title>
+    <style>
+        /* Загальний стиль для сторінки */
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+            position: relative;
+            overflow: hidden;
+        }
+
+        /* Сніжинки (фонові ефекти) */
+        .snowflakes {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            pointer-events: none;
+            z-index: 9999;
+            opacity: 0.8;
+        }
+        .snowflakes div {
+            position: absolute;
+            top: -10px;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 50%;
+            animation: fall 10s linear infinite;
+        }
+        @keyframes fall {
+            0% {
+                transform: translateY(-10px);
+                opacity: 1;
+            }
+            100% {
+                transform: translateY(100vh);
+                opacity: 0;
+            }
+        }
+
+        /* Заголовок */
+        header {
+            background-color: #ff4f58;
+            color: white;
+            text-align: center;
+            padding: 40px 20px;
+            border-bottom: 4px solid #ff3333;
+            background-image: url('https://www.example.com/path-to-your-snowflakes-icon.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            background-position: top center;
+        }
+
+        header h1 {
+            font-size: 40px;
+            margin: 0;
+            font-family: 'Georgia', serif;
+            text-shadow: 2px 2px 5px rgba(0, 0, 0, 0.3);
+        }
+
+        /* Основний контент */
+        main {
+            background-color: white;
+            margin: 40px auto;
+            padding: 40px;
+            width: 80%;
+            max-width: 800px;
+            border-radius: 8px;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+            position: relative;
+            z-index: 1;
+            border-top: 4px solid #ff4f58;
+        }
+
+        /* Стиль для списку побажань */
+        ul {
+            list-style-type: square;
+            padding-left: 20px;
+            font-size: 18px;
+        }
+
+        ul li {
+            margin-bottom: 10px;
+        }
+
+        /* Підпис у футері */
+        footer {
+            background-color: #ff4f58;
+            color: white;
+            text-align: center;
+            padding: 20px;
+            margin-top: 40px;
+        }
+
+        footer p {
+            margin: 0;
+            font-size: 18px;
+        }
+
+        /* Анімація для зірок */
+        .star {
+            position: absolute;
+            top: 10px;
+            left: 50%;
+            width: 80px;
+            height: 80px;
+            background-image: url('https://www.example.com/star-icon.png');
+            background-size: contain;
+            background-repeat: no-repeat;
+            transform: translateX(-50%);
+            animation: blink 2s infinite alternate;
+        }
+
+        /* Блиск зірки */
+        @keyframes blink {
+            0% {
+                opacity: 1;
+                transform: scale(1);
+            }
+            50% {
+                opacity: 0.5;
+                transform: scale(1.1);
+            }
+            100% {
+                opacity: 1;
+                transform: scale(1);
+            }
+        }
+
+        /* Адаптивний дизайн для маленьких екранів */
+        @media screen and (max-width: 768px) {
+            main {
+                width: 90%;
+                padding: 20px;
+            }
+
+            header h1 {
+                font-size: 30px;
+            }
+
+            footer p {
+                font-size: 16px;
+            }
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Сніжинки -->
+    <div class="snowflakes">
+        <div style="left: 10%; animation-duration: 12s;"></div>
+        <div style="left: 30%; animation-duration: 8s;"></div>
+        <div style="left: 50%; animation-duration: 10s;"></div>
+        <div style="left: 70%; animation-duration: 9s;"></div>
+        <div style="left: 90%; animation-duration: 11s;"></div>
+    </div>
+
+    <!-- Зірка для додавання елементів новорічної атрибутики -->
+    <div class="star"></div>
+
+    <header>
+        <h1>Дорогий Святе Миколаю!</h1>
+    </header>  
+
+    <main>
+        <p>Я старанно чекав на твій візит і дуже хочу подякувати тобі за всі добрі справи, які ти робиш для дітей по всьому світу. Цього року я був дуже старанним, допомагав вдома і в школі. Тому я вирішив написати до тебе. Моїх бажань не так багато, але вони справжні. Прошу тебе, якщо це можливо, виконати хоча б одне з них:</p>
+        
+        <ul>
+            <li>Миша Logitech G PRO X Superlight 2 white</li>
+            <li>Щось від себе, що ти вважаєш за необхідне</li>
+        </ul>
+        
+        <p>Я обіцяю продовжувати бути хорошим і допомагати тим, хто мене оточує. Дякую за твою доброту та увагу!</p>
+    </main>
+
+    <footer>
+        <p>З найкращими побажаннями, <br>Ілля Михалусь 2025</p>
+    </footer>
+</body>      
+</html>
